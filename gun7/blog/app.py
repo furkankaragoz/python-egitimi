@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, redirect, session
 
-from views.admin.BlogController import blog
-from views.admin.UyeController import uyeler
-from views.admin.GirisController import giris
+from gun7.blog.views.admin.BlogController import blog
+from gun7.blog.views.admin.UyeController import uyeler
+from gun7.blog.views.admin.GirisController import giris
 
 
 app = Flask(__name__)

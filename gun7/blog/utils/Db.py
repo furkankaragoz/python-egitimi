@@ -4,7 +4,7 @@ class Db():
 
     def open(self):
         self.connection = psycopg2.connect(user="postgres",
-                                           password= "veysel",
+                                           password= "system",
                                            host="127.0.0.1",
                                            port="5432",
                                            database="Blog")

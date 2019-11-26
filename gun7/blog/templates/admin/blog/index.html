@@ -1,12 +1,38 @@
 {% extends 'admin/layout.html' %}
 
 {% block body %}
-<div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-      </div>
+<div class="">
+    <br>
+    <br>
+    <br>
+    <br>
+    <a href="/admin/blog/ekle" class="btn btn-success btn-sm">YENİ BLOG YAZISI EKLE</a>
+    <table class="table table-bordered" style="margin-top:5px;">
+        <thead>
+        <tr>
+            <th>Baslik</th>
+            <th>Icerik</th>
+            <th>Yayin Tarihi</th>
+            <th>İşlemler</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{item[1]}}</td>
+                <td>{{item[2]}}</td>
+                <td>{{item[3]}}</td>
+                <td>
+                    <a href="/admin/blog/ekle/{{item[0]}}" class="btn btn-sm btn-info">GÜNCELLE</a>
+                    <a href="/admin/blog/sil/{{item[0]}}" onclick="return confirm('Kaydı silmek istediğinizden emin misiniz?')" class="btn btn-sm btn-danger">SİL</a>
 
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
-blog listesi
+</div>
+
 
 {% endblock %}

@@ -17,18 +17,19 @@
         </tr>
         </thead>
         <tbody>
-            {% for item in data %}
-            <tr>
-                <td>{{item[1]}}</td>
-                <td>{{item[2]}}</td>
-                <td>{{item[3]}}</td>
-                <td>
-                    <a href="/admin/blog/ekle/{{item[0]}}" class="btn btn-sm btn-info">GÜNCELLE</a>
-                    <a href="/admin/blog/sil/{{item[0]}}" onclick="return confirm('Kaydı silmek istediğinizden emin misiniz?')" class="btn btn-sm btn-danger">SİL</a>
+        {% for item in data %}
+        <tr>
+            <td>{{item[1]}}</td>
+            <td>{{item[2]}}</td>
+            <td>{{item[3]}}</td>
+            <td>
+                <a href="/admin/blog/ekle/{{item[0]}}" class="btn btn-sm btn-info">GÜNCELLE</a>
+                <a href="/admin/blog/sil/{{item[0]}}"
+                   onclick="return confirm('Kaydı silmek istediğinizden emin misiniz?')" class="btn btn-sm btn-danger">SİL</a>
 
-                </td>
-            </tr>
-            {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
         </tbody>
     </table>
 

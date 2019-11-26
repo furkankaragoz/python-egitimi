@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Girişi</title>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-       <link href="starter-template.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="starter-template.css" rel="stylesheet">
 </head>
 <body>
 
 <div style="width:500px;margin:0 auto;">
 
 
-<div class="card">
-    <div class="card-header">
-        <div class="card-title">ÜYE GİRİŞ FORMU</div>
-    </div>
-    <div class="card-body">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title">ÜYE GİRİŞ FORMU</div>
+        </div>
+        <div class="card-body">
 
-        {% if hata == True %}
-        <div class="alert alert-danger">Kullanıcı kaydı bulunamadı</div>
-        {% endif %}
+            {% if hata == True %}
+            <div class="alert alert-danger">Kullanıcı kaydı bulunamadı</div>
+            {% endif %}
 
-       <form action="/admin/giris/login" method="post">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" name="email" id="exampleInputEmail1" >
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Şifre </label>
-    <input type="password" name="sifre" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
+            <form action="/admin/giris/login" method="post">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control" name="email" id="exampleInputEmail1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Şifre </label>
+                    <input type="password" name="sifre" class="form-control" id="exampleInputPassword1"
+                           placeholder="Password">
+                </div>
 
-  <button type="submit" class="btn btn-primary">Giriş Yap</button>
-</form>
-</div>
+                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+            </form>
+        </div>
 
     </div>
 </div>

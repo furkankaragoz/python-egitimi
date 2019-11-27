@@ -24,13 +24,13 @@ def login():
     email = request.form.get("email")
     sifre = request.form.get("sifre")
 
-    # sifre_hash = hashlib.md5(sifre.encode()).hexdigest()
+    sifre_hash = hashlib.md5(sifre.encode()).hexdigest()
 
     databse = Db()
 
     sql = """ select * from "User" where "Email"=%s and "Password"=%s """
 
-    find = databse.read_first_data(sql, (email, sifre))
+    find = databse.read_first_data(sql, (email, sifre_hash))
     # find = databse.read_first_data(sql, (email, sifre_hash))
 
     if find is None:
